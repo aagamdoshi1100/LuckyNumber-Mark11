@@ -30,10 +30,12 @@ function GetDateByUser(){
 function Checker(a,b){
     if (a%b === 0){
         ParaG.style.color="Green";
+        ParaG.style.display = "flex";
          ParaG.innerText = "Your birth date is lucky";
 
     }else{
       ParaG.style.color="Red";
+      ParaG.style.display = "flex";
         ParaG.innerText = "Your birth date is not lucky";
     }
 }
@@ -44,6 +46,7 @@ function NegativeValueHandler(){
   if(LuckyNo.value<=0){
     LuckyNoValidkar.style.color="Red";
     LuckyNoValidkar.style.display = "block";
+    ParaG.style.display = "none";
     LuckyNoValidkar.innerText = "Please enter valid Lucky number. Value must be positive";
   }else{
     
